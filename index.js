@@ -1375,7 +1375,7 @@ case 'help':
 					break
 				case 'info2':
 				if (!isRegistered) return reply(ind.noregis())
-				    const uangku = checkATMuser(sender)
+				    const uangzap = checkATMuser(sender)
 					//const anos = client.user.os_version
 					//const merek = clien
 					await costum(ind.info2(pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp, _registered, uangku, role, premi, client, process,kyun), text, tescuk, cr)
