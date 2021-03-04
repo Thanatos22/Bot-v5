@@ -1375,7 +1375,6 @@ case 'help':
 					break
 				case 'info2':
 				if (!isRegistered) return reply(ind.noregis())
-				    const reqXp  = 5000 * (Math.pow(2, getLevelingLevel(sender)) - 1)
 				    const uangku = checkATMuser(sender)
 					//const anos = client.user.os_version
 					//const merek = clien
