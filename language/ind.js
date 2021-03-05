@@ -178,7 +178,7 @@ exports.premon = (pushname) => {
 	return`Desculpe ${pushname} você não tem autorização moderador ou premium`
 }
 
-exports.info2 = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp, _registered, uangku, role, premi, client , process) => { 
+exports.info2 = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, zapXp, _registered, uangku, role, premi, client , process) => { 
 	return `
 ${a}❏𝙎𝙊𝘽𝙍𝙀 𝙊 𝘽𝙊𝙏${a}
  ${a}│ • Nome : ${client.user.name}${a}
