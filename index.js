@@ -1000,6 +1000,7 @@ case 'register':
 					break
 				case 'info2':
 				if (!isRegistered) return reply(ind.noregis())
+				    const reqXp  = 4000 * (Math.pow(2, getLevelingLevel(sender)) - 1)
 				    const uangzap = checkATMuser(sender)
 					//const anos = client.user.os_version
 					//const merek = clien
@@ -1997,7 +1998,7 @@ case 'register':
 				if (!isGroupAdmins) return reply(ind.ownerg())
 					namastc = body.slice(10)
 					buffer = fs.readFileSync(`./strg/apk/${namastc}.apk`)
-					client.sendMessage(from, buffer, apk, { mimetype: 'document/apk', quoted: mek })
+					client.sendMessage(from, buffer, document, { mimetype: 'document/apk', quoted: mek })
 					break
 				case 'listapk':
 				case 'apklist':
