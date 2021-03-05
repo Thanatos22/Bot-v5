@@ -25,7 +25,7 @@ exports.lvlnoon = () => {
 }
 
 exports.noregis = () => {
-	return`*Para usar este comando você deve se resgistrar*\n\n*EXEMPLO: ${prefix}register NOME|IDADE* \n*`
+	return`*Para usar este comando você deve se resgistrar*\n\n*EXEMPLO: ${prefix}register NOME|IDADE* \n`
 }
 
 exports.rediregis = () => {
