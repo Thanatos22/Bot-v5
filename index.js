@@ -70,6 +70,7 @@ const setiker = JSON.parse(fs.readFileSync('./strg/stik.json'))
 const videonye = JSON.parse(fs.readFileSync('./strg/video.json'))
 const audionye = JSON.parse(fs.readFileSync('./strg/audio.json'))
 const imagenye = JSON.parse(fs.readFileSync('./strg/image.json'))
+const documentnye = JSON.parse(fs.readFileSync('./strg/apk.json'))
 const _leveling = JSON.parse(fs.readFileSync('./database/group/leveling.json'))
 const _level = JSON.parse(fs.readFileSync('./database/user/level.json'))
 const _registered = JSON.parse(fs.readFileSync('./database/bot/registered.json'))
@@ -1390,6 +1391,18 @@ case 'register':
 						client.groupSettingChange(from, GroupSettingChange.messageSend, true)
 					}
 				break      
+				case 'mod':
+					if (!isGroup) return reply(ind.groupo())
+					if (!isPrem) return reply(ind.premon(pushname))
+					if (!isBotGroupAdmins) return reply(ind.badmin())
+					if (args[0] === 'open') {
+					    reply(`Grupo aberto com sucesso`)
+						client.groupSettingChange(from, GroupSettingChange.messageSend, false)
+					} else if (args[0] === 'close') {
+						reply(`Grupo fechado com sucesso`)
+						client.groupSettingChange(from, GroupSettingChange.messageSend, true)
+					}
+				break      
 				case 'setname':
                 if (!isGroup) return reply(ind.groupo())
 			    if (!isGroupAdmins) return reply(ind.admin())
@@ -1814,7 +1827,7 @@ case 'register':
 				})
 				break
 
-				case 'tupai':
+				case 'matheuszin':
 				if (!isRegistered) return reply(ind.noregis())
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await client.downloadAndSaveMediaMessage(encmedia)
@@ -1827,7 +1840,7 @@ case 'register':
 						fs.unlinkSync(ran)
 					})
 				break
-				case 'gemok':
+				case 'engrossar':
 				if (!isRegistered) return reply(ind.noregis())
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await client.downloadAndSaveMediaMessage(encmedia)
