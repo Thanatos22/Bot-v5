@@ -876,7 +876,7 @@ case 'register':
                     console.log(color('[REGISTER]'), color(time, 'yellow'), 'Name:', color(namaUser, 'cyan'), 'Age:', color(umurUser, 'cyan'), 'Serial:', color(serialUser, 'cyan'))
                 }
 				break
-					break */
+					break 
 				//jojo 
 				case 'stickerhide':
 				    ranp = getRandom('.gif')
