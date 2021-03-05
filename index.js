@@ -1164,8 +1164,8 @@ case 'register':
 					confirmATM(sender, total)
 					bayarLimit(sender, payout)
 					await reply(`*「 𝙊𝙋𝙀𝙍𝘼𝘾𝘼𝙊 𝘽𝙀𝙈 𝙎𝙐𝘾𝙀𝘿𝙄𝘿𝘼 ✅ 」*\n\n*Remetente* : Admin\n*Receptor* : ${pushname}\n*Quantidade de Limites comprados* : ${payout} \n*Preço pago por cada limite* : ${koinPerlimit}/limit\n*Restante dos seus pontos* : ${checkATMuser(sender)}\n\nProcedimento bem sucedido\n\nO código abaixo é o comprovante da sua compra\n*${createSerial(15)}*`)
+					}
 					break
-
 				case 'probabilidade':
 				if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
