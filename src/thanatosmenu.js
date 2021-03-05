@@ -7,6 +7,7 @@ const thanatosmenu = (prefix) => {
 
 ║│↭ _*prefix*  [ * ${prefix} * ] 
 
+║│↭_*   [ *${prefix}cmd* ] 
 ║│↭_*   [ *${prefix}setprefix* ] 
 ║│↭_*   [ *${prefix}clearall* ] 
 ║│↭_*   [ *${prefix}clone* ] 

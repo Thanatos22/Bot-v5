@@ -10,7 +10,7 @@ const help = (prefix) => {
 ║│ 𝙉𝙊𝙏𝙀: 𝙋𝘼𝙍𝘼 𝙐𝙎𝘼𝙍 𝘼𝙇𝙂𝙐𝙈𝘼𝙎 𝘿𝘼𝙎 𝙁𝙐𝙉𝘾𝙊𝙀𝙎 𝘿𝙀𝙎𝙏𝙀 𝘽𝙊𝙏 𝙁𝘼𝙕-𝙎𝙀 𝙉𝙀𝘾𝙀𝙎𝙎𝘼𝙍𝙄𝙊 𝙎𝙀 𝙄𝙉𝙎𝘾𝙍𝙀𝙑𝙀𝙍
 
 ║│↭_*   [ *${prefix}register* ] 
-║│↭_*   [ *${prefix}user* ] 
+║│↭_*   [ *${prefix}about* ] 
 ║│↭_*   [ *${prefix}limit* ] 
 ║│↭_*   [ *${prefix}buylimit* ] 
 ║│↭_*   [ *${prefix}transfer* ] 
@@ -25,8 +25,6 @@ const help = (prefix) => {
 ║│↭_*   [ *${prefix}mediamemu* ] 
 ║│↭_*   [ *${prefix}info* ] 
 ║│↭_*   [ *${prefix}gp* ] 
-║│↭_*   [ *${prefix}tag* ]  (𝙏𝙍𝘿)
-║│↭_*   [ *${prefix}business* ]  (𝙏𝙍𝘿)
 ║│↭_*   [ *${prefix}namoradinha* ]  (𝙋𝙑)
 ║│↭_*   [ *${prefix}namoradinho* ]  (𝙋𝙑)
 ║│↭_*   [ *${prefix}next* ]  (𝙋𝙑)
@@ -36,8 +34,10 @@ const help = (prefix) => {
 ║│↭ _*  [ *${prefix}ocr* ] 
 ║│↭_*   [ *${prefix}ytmp4* ] 𝙓
 ║│↭_*   [ *${prefix}ytmp3* ] 𝙓
-║│↭_*   [ *${prefix}play* ] 𝙓
+║│↭_*   [ *${prefix}play* ] 
+║│↭_*   [ *${prefix}randomloli* ] 
 ║│↭_*   [ *${prefix}packCH* ] 
+║│↭_*   [ *${prefix}bases* ] 
 ║│↭ _*  [ *${prefix}sticker* ] 
 ║│↭_*   [ *${prefix}sugestões* ]  
 ║│↭_*   [ *${prefix}listadms* ] 
