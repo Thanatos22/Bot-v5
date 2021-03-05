@@ -85,7 +85,7 @@ exports.registered = (namaUser, umurUser, serialUser, time, sender) => {
 }
 
 exports.cmdnf = (prefix, command) => {
-	return`comando *${prefix}${command}* não encontrado\use  *${prefix}menu*`
+	return`comando *${prefix}${command}* não encontrado para conhecer meus comandos use *${prefix}menu*`
 }
 
 exports.owneresce = (pushname) => {
