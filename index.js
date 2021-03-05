@@ -816,7 +816,7 @@ client.on('group-participants-update', async (anu) => {
 					}, 0) // 1000 = 1s,
 					await limitAdd(sender) 
 				break */
-				case 'meme':
+/*				case 'meme':
                 if (!isRegistered) return reply(ind.noregis())
                 if (isLimit(sender)) return reply(ind.limitend(pusname))
 					nganu = await fetchJson(`https://vinz.zeks.xyz/api/meme`)
@@ -833,7 +833,7 @@ client.on('group-participants-update', async (anu) => {
 					tak = await getBuffer(`https://api.zeks.xyz/api/nulis?text=${nul}&apikey=apivinz`)
 					client.sendMessage(from, tak, image, {quoted: mek, caption: 'Zapzap'})
 					await limitAdd(sender)				
-				break			
+				break			*/
 				//premiom
 				case 'checkmod':
 				const cekExp = ms(getPremiumExpired(sender) - Date.now())
@@ -992,24 +992,22 @@ case 'register':
 					chefe = fs.readFileSync('./assets/macaco.jpg')
 					client.sendMessage(from, chefe, image, {quoted: mek, caption: gp(prefix), text})
 					break
-				case 'user':
+				case 'about':
 				if (!isRegistered) return reply(ind.noregis())
 				    const reqXp  = 5000 * (Math.pow(2, getLevelingLevel(sender)) - 1)
 				    const uangku = checkATMuser(sender)
-					await costum(ind.menu(pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp, _registered, uangku, role, premi), text, tescuk, cr)
-					break
-				case 'info2':
-				if (!isRegistered) return reply(ind.noregis())
-				    const zapXp  = 5000 * (Math.pow(2, getLevelingLevel(sender)) - 1)
-				    const uangzap = checkATMuser(sender)
 					//const anos = client.user.os_version
 					//const merek = clien
-					await costum(ind.info2(pushname, prefix, getLevelingLevel, getLevelingXp, sender, zapXp, _registered, uangku, role, premi, client, process,kyun), text, tescuk, cr)
+					await costum(ind.menu(pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp, _registered, uangku, role, premi, client, process,kyun), text, tescuk, cr)
 					break
 				case 'info':
 					me = client.user
 					uptime = process.uptime()
-					teks = `*Nome do bot* : ${me.name}\n*Dono* : *Thanatos of gore*\n*DEV* : Thanatos ruin falido\n*Número do bot* : @${me.jid.split('@')[0]}\n*Prefixo dos meus comandos* : ${prefix}\n*Total de putas bloqueadas* : ${blocked.length}\n\n*𝙎𝙋𝙀𝘾𝙄𝘼𝙇 𝙏𝙃𝘼𝙉𝙆𝙎 𝙏𝙊* :/n• Mhankbarbar/n• Ampibi gameplay/n• Tobz/n• Jojo`
+					teks = `*Nome do bot* : ${me.name}\n*Dono* : *Thanatos of gore*\n*DEV* : Thanatos ruin falido\n*Número do bot* : @${me.jid.split('@')[0]}\n*Prefixo dos meus comandos* : ${prefix}\n*Total de putas bloqueadas* : ${blocked.length}\n\n*𝙎𝙋𝙀𝘾𝙄𝘼𝙇 𝙏𝙃𝘼𝙉𝙆𝙎 𝙏𝙊* :
+					• Mhankbarbar
+					• Ampibi gameplay
+					• Tobz
+					• Jojo`
 					buffer = await getBuffer(me.imgUrl)
 					client.sendMessage(from, buffer, image, {caption: teks, contextInfo:{mentionedJid: [me.jid]}})
 					break
@@ -1021,10 +1019,6 @@ case 'register':
 					chaves = fs.readFileSync('./assets/Chaves.mp3')
 					client.sendMessage(from, chaves, audio, { quoted: mek})
 					break
-                case 'totransando':
-					zuera = fs.readFileSync('./assets/parademandar.mp3')
-					client.sendMessage(from, zuera, audio, { quoted: mek})
-					break
 				case 'kmkzlist': 
 					teks = '𝙋𝙐𝙏𝘼𝙎 𝘽𝙇𝙊𝙌𝙐𝙀𝘼𝘿𝘼𝙎 :\n'
 					for (let block of blocked) {
@@ -1033,7 +1027,7 @@ case 'register':
 					teks += `𝗧𝗼𝘁𝗮𝗹 : ${blocked.length}`
 					client.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": blocked}})
 					break 
-				case 'leaderboard':
+/*				case 'leaderboard':
 				case 'lb':
 				bo = args[0]
 				_level.sort((a, b) => (a.xp < b.xp) ? 1 : -1)
@@ -1053,7 +1047,7 @@ case 'register':
                     console.error(err)
                     await reply(`minimal ${len} user untuk bisa mengakses database`)
                 }
-				break
+				break */
 				case 'limit':
 				   if (!isRegistered) return reply(ind.noregis())
 				   checkLimit(sender)
@@ -1075,7 +1069,7 @@ case 'register':
                         if (found !== false) {
                             _limit[found].limit -= jmla
                             const updated = _limit[found]
-                            const result = `Pronto papai presenteei o usuário com os limites/n Código de transferência realizada: ${createSerial(8)} horário: ${moment().format('DD/MM/YY HH:mm:ss')}
+                            const result = `Pronto papai, presenteei o usuário com os limites/n Código de transferência realizada: ${createSerial(8)} horário: ${moment().format('DD/MM/YY HH:mm:ss')}
 *「 𝙋𝙍𝙀𝙎𝙀𝙉𝙏𝙀 🎁 」*
 
 • Usuário : @${updated.id.replace('@s.whatsapp.net','')}
@@ -1084,13 +1078,13 @@ case 'register':
                             fs.writeFileSync('./database/user/limit.json',JSON.stringify(_limit));
                             reply(result)
                         } else {
-                                reply(`Maaf, nomor ${nomerr} tidak terdaftar di database!`)
+                                reply(`Número ${nomerr} não registrado na minha database`)
                         }
                 break
-				case 'premlist':
-	            case 'listprem':
+				case 'modlist':
+	            case 'listmod':
 	                if (!isRegistered) return reply( ind.noregis())
-	                let listPremi = '「 *PREMIUM USER LIST* 」\n\n'
+	                let listPremi = '「 𝙈𝙊𝘿𝙀𝙍𝘼𝘿𝙊𝙍𝙀𝙎/𝙋𝙍𝙀𝙈 」\n\n'
 	                let nomorList = 0
 	                const deret = getAllPremiumUser()
 	                const arrayPremi = []
@@ -1098,7 +1092,7 @@ case 'register':
 	                    const checkExp = ms(getPremiumExpired(deret[i]) - Date.now())
 	                    arrayPremi.push(getAllPremiumUser()[i])
 	                    nomorList++
-	                    listPremi += `${nomorList}. wa.me/${getAllPremiumUser()[i].split("@")[0]}\n➸ *Expired*: ${checkExp.days} day(s) ${checkExp.hours} hour(s) ${checkExp.minutes} minute(s)\n\n`
+	                    listPremi += `${nomorList}. wa.me/${getAllPremiumUser()[i].split("@")[0]}\n➸ *Expira em*: ${checkExp.days} dia(s) ${checkExp.hours} hora(s) ${checkExp.minutes} minutos(s)\n\n`
 	                }
 	                await reply(listPremi)
 	            break
@@ -1495,7 +1489,7 @@ case 'register':
                 if (!isGroupAdmins) return reply(ind.admin())
                 if (args.length < 1) return reply('Man, c tem que escolher entre on (ativar) e off (desativar)')
                 if (args[0] === 'on') {
-                if (isLevelingOn) return reply('*fitur level sudah aktif sebelum nya*')
+                if (isLevelingOn) return reply('*Ja ta ativado*')
                  	   _leveling.push(from)
                  	   fs.writeFileSync('./database/group/leveling.json', JSON.stringify(_leveling))
                   	   reply(ind.lvlon())
@@ -1507,7 +1501,7 @@ case 'register':
                  	   reply(ind.satukos())
                 	}
 				break 
-				case 'nobadword':
+	/*			case 'nobadword':
                     if (!isGroup) return reply(ind.groupo())
                 if (!isGroupAdmins) return reply(ind.admin())
                 if (args.length < 1) return reply('Man, c tem que escolher entre on (ativar) e off (desativar)')
@@ -1523,7 +1517,7 @@ case 'register':
              	   } else {
                  	   reply(ind.satukos())
                 	}
-                    break
+                    break */
 				case 'linkgp':
 				    if (!isGroup) return reply(ind.groupo())
 				    if (isLimit(sender)) return reply(ind.limitend(pusname))
@@ -1551,7 +1545,7 @@ case 'register':
 				     	if (!isGroupAdmins) return reply(ind.admin())
 						client.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
 						break
-				case 'addbadword':
+/*				case 'addbadword':
                     if (!isOwner) return reply(ind.ownerb())
                     if (!isGroupAdmins) return reply(ind.admin())
                     if (args.length < 1) return reply( `C ta fazendo merda ai`)
@@ -1569,13 +1563,13 @@ case 'register':
                     fs.writeFileSync('./database/group/bad.json', JSON.stringify(bad))
                     reply('Pronto papai, tirei essa porra da minha database')
                     break 
-                case 'listbadword':
+           case 'listbadword':
                     let lbw = `Ini adalah list BAD WORD\nTotal : ${bad.length}\n`
                     for (let i of bad) {
                         lbw += `➸ ${i.replace(bad)}\n`
                     }
                     await reply(lbw)
-                    break 
+                    break  */
                 
                 	
 				//admin feature 
@@ -1666,7 +1660,7 @@ case 'register':
 				case 'setpp':
 					if (!isOwner) return reply(ind.ownerb())
 				    client.updatePresence(from, Presence.composing) 
-					if (!isQuotedImage) return reply(`Kirim gambar dengan caption ${prefix}setbotpp atau tag gambar yang sudah dikirim`)
+					if (!isQuotedImage) return reply(`Pra usar esse comando c tem que marcar uma imagem ou enviar uma com a legenda .setpp`)
 					enmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await client.downloadAndSaveMediaMessage(enmedia)
 					await client.updateProfilePicture(botNumber, media)
