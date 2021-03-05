@@ -686,17 +686,17 @@ client.on('group-participants-update', async (anu) => {
             if (bad.includes(messagesC)) {
                 if (!isGroupAdmins) {
                     try { 
-                        reply("Seu filho da puta, c ta falando merda a1")
+                        reply("Seu filho da puta, c ta falando merda ai")
                         setTimeout( () => {
- 	                           client.groupLeave(from) 
+ 	                           var kic = `${sender.split("@")[0]}@s.whatsapp.net`
 							}, 2000)
 								setTimeout( () => {
 								client.updatePresence(from, Presence.composing)
-								reply("Estes seram seus ultimos segundos aqui")
+								reply("Estes serão seus ultimos segundos aqui")
 							}, 1000)
 								setTimeout( () => {
 								client.updatePresence(from, Presence.composing)
-								reply("*「 𝘼𝙉𝙏𝙄 𝘽𝘼𝘿𝙒𝙊𝙍𝘿 」*\nVoce sera expluso por falar merda")
+								reply("*「 𝘼𝙉𝙏𝙄 𝘽𝘼𝘿𝙒𝙊𝙍𝘿 」*\nVocê sera expluso por falar merda")
 							}, 0)
                         } catch { client.sendMessage(from, `Felizmente, não sou um administrador, se o administrador já o chutou!`, text , {quoted : mek}) }
                 } else {
@@ -1004,7 +1004,7 @@ case 'register':
 				    const uangzap = checkATMuser(sender)
 					//const anos = client.user.os_version
 					//const merek = clien
-					await costum(ind.info2(pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp, _registered, uangku, role, premi, client, process,kyun), text, tescuk, cr)
+					await costum(ind.info2(pushname, prefix, getLevelingLevel, getLevelingXp, sender, zapXp, _registered, uangku, role, premi, client, process,kyun), text, tescuk, cr)
 					break
 				case 'info':
 					me = client.user
@@ -1392,18 +1392,6 @@ case 'register':
 						client.groupSettingChange(from, GroupSettingChange.messageSend, true)
 					}
 				break      
-				case 'mod':
-					if (!isGroup) return reply(ind.groupo())
-					if (!isPrem) return reply(ind.premon(pushname))
-					if (!isBotGroupAdmins) return reply(ind.badmin())
-					if (args[0] === 'open') {
-					    reply(`Grupo aberto com sucesso`)
-						client.groupSettingChange(from, GroupSettingChange.messageSend, false)
-					} else if (args[0] === 'close') {
-						reply(`Grupo fechado com sucesso`)
-						client.groupSettingChange(from, GroupSettingChange.messageSend, true)
-					}
-				break      
 				case 'setname':
                 if (!isGroup) return reply(ind.groupo())
 			    if (!isGroupAdmins) return reply(ind.admin())
@@ -1570,7 +1558,7 @@ case 'register':
                     const bw = body.slice(12)
                     bad.push(bw)
                     fs.writeFileSync('./database/group/bad.json', JSON.stringify(bad))
-                    reply('Pronto papai, tirei essa desgraça da minha database')
+                    reply('Pronto papai, adicionei essa desgraça a minha database')
                     break
                 case 'delbadword':
                     if (!isOwner) return reply(ind.ownerb())
@@ -1894,7 +1882,7 @@ case 'register':
 					setiker.push(`${svst}`)
 					fs.writeFileSync(`./strg/sticker/${svst}.webp`, delb)
 					fs.writeFileSync(`./strg/stik.json`, JSON.stringify(setiker))
-					client.sendMessage(from, `Sukses Menambahkan Sticker\nCek dengan cara ${prefix}liststicker`, MessageType.text, { quoted: mek })
+					client.sendMessage(from, `Pronto macaco, adicionei essa figurinha a minha database. Para conferir use ${prefix}liststicker`, MessageType.text, { quoted: mek })
 					break
 				case 'addaudio':
 				if (!isRegistered) return reply(ind.noregis())
@@ -1906,7 +1894,7 @@ case 'register':
 					audionye.push(`${svst}`)
 					fs.writeFileSync(`./strg/audio/${svst}.mp3`, delb)
 					fs.writeFileSync('./strg/audio.json', JSON.stringify(audionye))
-					client.sendMessage(from, `Sukses Menambahkan Video\nCek dengan cara ${prefix}listvn`, MessageType.text, { quoted: mek })
+					client.sendMessage(from, `Pronto macaco, adicionei esse audio a minha database. Para conferir use ${prefix}listaudio`, MessageType.text, { quoted: mek })
 					break
 				case 'getaudio':
 				if (!isRegistered) return reply(ind.noregis())
@@ -1979,37 +1967,7 @@ case 'register':
 					}
 					teks += `\n*Total : ${videonye.length}*`
 					client.sendMessage(from, teks.trim(), extendedText, { quoted: mek, contextInfo: { "mentionedJid": videonye } })
-					break	
-				case 'addapk':
-				if (!isRegistered) return reply(ind.noregis())
-				if (!isGroupAdmins) return reply(ind.ownerg())
-					if (!isQuotedDocument) return reply('Pra usar esse comando c tem que marcar um documento')
-					svst = body.slice(10)
-					if (!svst) return reply('Seu filho da puta como se quer que eu salve essa porra de apk se tu não prestou nem pra dar um nome pra ele')
-					boij = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
-					delb = await client.downloadMediaMessage(boij)
-					documentnye.push(`${svst}`)
-					fs.writeFileSync(`./strg/apk/${svst}.apk`, delb)
-					fs.writeFileSync('./strg/apk.json', JSON.stringify(videonye))
-					client.sendMessage(from, `Pronto macaco, adicionei esse video a minha database. Para conferir use ${prefix}listapk`, MessageType.text, { quoted: mek })
-					break
-				case 'getapk':
-				if (!isRegistered) return reply(ind.noregis())
-				if (!isGroupAdmins) return reply(ind.ownerg())
-					namastc = body.slice(10)
-					buffer = fs.readFileSync(`./strg/apk/${namastc}.apk`)
-					client.sendMessage(from, buffer, document, { mimetype: 'document/apk', quoted: mek })
-					break
-				case 'listapk':
-				case 'apklist':
-				if (!isRegistered) return reply(ind.noregis())
-					teks = '*Lista dos apks adicionados a minha database :*\n\n'
-					for (let awokwkwk of documentnye) {
-						teks += `- ${awokwkwk}\n`
-					}
-					teks += `\n*Total : ${documentnye.length}*`
-					client.sendMessage(from, teks.trim(), extendedText, { quoted: mek, contextInfo: { "mentionedJid": documentnye } })
-					break	
+					break		
 				
 				default:
             if (/^>/.test(pes)) {
