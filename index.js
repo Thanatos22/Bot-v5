@@ -57,7 +57,7 @@ limitawal = 30
 memberlimit = 0
 ator = 'THANATOS'
 namo = 'BOT'
-cr = '*BOT INI SUDAH TERVERIFIKASI*'
+cr = '*BOT VERIFIFICADO POR MARK ZUKENBERGO E THANATOS COMEDOR DE CASADAS*'
 /*************************************/
 
 /******** OWNER NUMBER**********/
@@ -366,7 +366,7 @@ client.on('group-participants-update', async (anu) => {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `Coe @${num.split('@')[0]} sou o ${me.name} e seja bem vindo ao grupo *${mdata.subject}* lembra de ler a desgraça da regras, para acessar meu menu use ${prefix}help`
+				teks = `Coe @${num.split('@')[0]} sou o bot thanatos 👨🏿‍💻 e seja bem vindo ao grupo *${mdata.subject}* lembra de ler a desgraça da regras, para acessar meu menu use ${prefix}help`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
@@ -841,7 +841,7 @@ client.on('group-participants-update', async (anu) => {
 				break
 				
 				//qr 
-                case 'ranime':
+                case 'randomloli':
 				if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
 					gatauda = body.slice(8)
@@ -1004,10 +1004,10 @@ case 'register':
 					me = client.user
 					uptime = process.uptime()
 					teks = `*Nome do bot* : ${me.name}\n*Dono* : *Thanatos of gore*\n*DEV* : Thanatos ruin falido\n*Número do bot* : @${me.jid.split('@')[0]}\n*Prefixo dos meus comandos* : ${prefix}\n*Total de putas bloqueadas* : ${blocked.length}\n\n*𝙎𝙋𝙀𝘾𝙄𝘼𝙇 𝙏𝙃𝘼𝙉𝙆𝙎 𝙏𝙊* :
-					• Mhankbarbar
-					• Ampibi gameplay
-					• Tobz
-					• Jojo`
+• Mhankbarbar 
+• Ampibi gameplay
+• Tobz
+• Jojo`
 					buffer = await getBuffer(me.imgUrl)
 					client.sendMessage(from, buffer, image, {caption: teks, contextInfo:{mentionedJid: [me.jid]}})
 					break
