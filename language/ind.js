@@ -81,7 +81,7 @@ exports.pc = () => {
 }
 
 exports.registered = (namaUser, umurUser, serialUser, time, sender) => {
-	return`*「 𝙍𝙀𝙂𝙄𝙎𝙏𝙍𝘼𝘿𝙊 ✅ 」*\n\nNovo registro de usuário realizado com sucesso \n\n┏━⊱*Nome*\n┗⊱${namaUser}\n┏━⊱*Número*\n┗⊱wa.me/${sender.split("@")[0]}\n┏━⊱*Idade do usuário*\n┗⊱${umurUser}\n┏━⊱*Data e hora em que foi realizado cadastro\n┗⊱${time}\n\n┏━❉ *Número de serie do usuário cadastrado* ❉━\n┣⊱${serialUser}\n┗⊱NOTE : NÃO SE ESQUEÇA DESSE NÚMERO`
+	return`*「 𝙍𝙀𝙂𝙄𝙎𝙏𝙍𝘼𝘿𝙊 ✅ 」*\n\nNovo registro de usuário realizado com sucesso \n\n┏━⊱ *Nome*\n┗⊱${namaUser}\n┏━⊱ *Número*\n┗⊱wa.me/${sender.split("@")[0]}\n┏━⊱ *Idade do usuário*\n┗⊱${umurUser}\n┏━⊱ *Data e hora em que foi realizado cadastro*\n┗⊱${time}\n\n┏━❉ *Número de serie do usuário cadastrado* ❉━\n┣⊱${serialUser}\n┗⊱NOTE : NÃO SE ESQUEÇA DESSE NÚMERO`
 }
 
 exports.cmdnf = (prefix, command) => {
@@ -116,7 +116,7 @@ exports.reglevelahf = (command, pushname, getLevelingLevel, sender, ahf) => {
 	return`*Desculpe ${pushname} seu Level não é suficiente*\n\n*┏⊱seu level : ${getLevelingLevel(sender)}*\n*┣⊱tipo de comando : ${command}*\n*┗⊱level nescessário : ${ahf}*\n\n_NOTE : Para obter xp interaja nos grupos onde o bot está_`
 }
 
-exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp, _registered, uangku, role, premi) => { 
+exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp, _registered, uangku, role, premi, client , process) => { 
 	return `
 ┏━━━⊱  *𝙐𝙎𝙐𝘼𝙍𝙄𝙊*  ⊰━━┓
 ┣⊱ *Nome* : ${pushname}
@@ -127,6 +127,16 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┣⊱ *Level* : ${getLevelingLevel(sender)}
 ┣⊱ *Patente* : ${role}
 ┗━━━⊱  ⸨ *𝘽𝙊𝙏 𝙏𝙃𝘼𝙉𝘼𝙏𝙊𝙎* ⸩  ⊰━━━━┛
+ 
+
+${a}❏𝙎𝙊𝘽𝙍𝙀 𝙊 𝘽𝙊𝙏${a}
+ ${a}│ • Nome : ${client.user.name}${a}
+ ${a}│ • Navegador : ${client.browserDescription[1]}${a}
+ ${a}│ • Servidor : ${client.browserDescription[0]}${a}
+ ${a}│ • Versão : ${client.browserDescription[2]}${a}
+ ${a}│ • Speed : ${process.uptime()}${a}
+ ${a}│ • Celular : ${client.user.phone.device_manufacturer}${a}
+ ${a}╰ • Versão do Whatsapp : ${client.user.phone.wa_version}${a}
 `
 }
 
@@ -176,17 +186,4 @@ exports.dellprem = (hnom) => {
 
 exports.premon = (pushname) => {
 	return`Desculpe ${pushname} você não tem autorização moderador ou premium`
-}
-
-exports.info2 = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, zapXp, _registered, uangku, role, premi, client , process) => { 
-	return `
-${a}❏𝙎𝙊𝘽𝙍𝙀 𝙊 𝘽𝙊𝙏${a}
- ${a}│ • Nome : ${client.user.name}${a}
- ${a}│ • Navegador : ${client.browserDescription[1]}${a}
- ${a}│ • Servidor hospedado : ${client.browserDescription[0]}${a}
- ${a}│ • Versão : ${client.browserDescription[2]}${a}
- ${a}│ • Speed : ${process.uptime()}${a}
- ${a}│ • Celular : ${client.user.phone.device_manufacturer}${a}
- ${a}╰ • Versão do Whatsapp : ${client.user.phone.wa_version}${a}
-`
 }
