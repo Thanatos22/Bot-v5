@@ -758,6 +758,12 @@ client.on('group-participants-update', async (anu) => {
 						reply("este sera seu último segundo aqui")
 					}, 0)
 				}
+				
+				//functions without prefix
+             if (messagesC.includes("sexo")){
+		const gagada = fs.readFileSync('./mp3/sexo.mp3')
+        client.sendMessage(from, gagada, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+        }
  	       
  	     
  	           //function balance
